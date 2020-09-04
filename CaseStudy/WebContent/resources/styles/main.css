@@ -1,0 +1,83 @@
+body {
+	font-size: 18px !important;
+	color: #0d4d82 !important;
+	font-weight: 300 !important;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+h1, h3 {
+	color: red;
+}
+
+.bgBlue {
+	background: #0d4d82 !important;
+	color: white;
+	font-size: 22px;
+}
+
+.textBlue,.userMessage {
+	color: #0d4d82 !important;
+}
+
+.borderBlue {
+	border-color: #0d4d82 !important;
+}
+
+.nav-link {
+	color: #0d4d82 !important;
+}
+
+.nav-link:hover {
+	color: red !important;
+}
+
+.headerImage {
+	height: 800px;
+	width: 100%;
+}
+
+.btn:focus {
+	outline: none !important;
+}
+
+.teamImg {
+	width: 100px;
+	height: 150px;
+}
+
+.addMarginToNavbar {
+	margin-bottom: 200px;
+}
+
+.contactImage {
+	width: 90%;
+	/*height: 150px;*/
+}
+
+#loginFooter {
+	margin-top: 385px;
+}
+
+#updateTenantFooter {
+	margin-top: 405px;
+}
+
+.form-control, option {
+	font-size: 1rem;
+	font-weight: 100 !important;
+}
+
+
+#building, #apartment {
+	width: 180px;
+	height: 38px;
+}
+
+#building2, #apartment2, #tenant {
+	width: 286.66px;
+	height: 38px;
+}
+
+#addMarginBottom{
+	margin-bottom:400px;
+}
