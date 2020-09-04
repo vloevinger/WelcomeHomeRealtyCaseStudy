@@ -71,20 +71,30 @@ The tenants page displays a list of all tenants.
 The landlord can  update all tenant information, view tenant lease, add a new tenant, or delete a tenant(only if tenant has no related records in other tables).
 
 # Buildings Page - viewable to logged in Landlord 
+The landlord can see a list of all buildings, update a building, add a new building, or delele a building with no related records in other tables.  
+Landlord can also click the "Apartments" button to see a list of all apartments in that building.
 
 # Apartments in Building Page - viewable to logged in Landlord 
+The landlord can see a list of all apartments in a particular building, update the apartment, add a new apartment, and delete an apartment if it has not related records in other tables.
 
 # Invoices Page - viewable to logged in Landlord 
+The landlord can see a list of all ivoices in, update invoice, add a new invoice for a tenant, and delete an invoice.
+If the landlord changed the paid status, the associated tenant's balance will be updated.
 
 # Who uses WelcomeHomeRealty
-This website can be used for any company as a started template for a website.
+This website can be used to support the business functions of a real estate management company.
 
 # Goal
-Create a template for a home page, contact page, and sign up page that can be reused by different uses as a starter template for their website.
+Create a template for a to support the business functions of a real estate management company that can be accessed by tenants and landlords.
+
+# Future Improvements
+1- Add logical constraints to the database
+2- Make paympent processing work
+
 
 # What is the license for this WelcomeHomeRealty? 
 This website uses Bootstrap v4.5 and google fonts.
-The rest of this project is in the public domain
+The rest of this project is in the public domain.
 
 # Developer Contact Information
 Valerie Loevinger
