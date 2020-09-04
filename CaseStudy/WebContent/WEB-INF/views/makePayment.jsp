@@ -95,7 +95,7 @@
 			</div>
 		</div>
 		<div class ="row justify-content-center">
-			<div class="col-md-6 mt-3">
+			<div class="col-md-6 mt-3 text-center">
 				${userMessage}
 			</div>
 		</div>

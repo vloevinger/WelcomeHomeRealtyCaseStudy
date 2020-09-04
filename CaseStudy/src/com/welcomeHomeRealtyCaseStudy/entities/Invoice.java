@@ -7,11 +7,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import com.sun.istack.NotNull;
 
 @Entity
+@Table(name="Invoice",
+uniqueConstraints = @UniqueConstraint(columnNames = {"description","tenantId"})
+)
 public class Invoice {
 	@Id
 	@NotNull
@@ -21,6 +27,7 @@ public class Invoice {
 	
 	@NotNull
 	@ManyToOne
+	@JoinColumn(name = "tenantId")
 	private Tenant tenant;
 	
 	@Basic

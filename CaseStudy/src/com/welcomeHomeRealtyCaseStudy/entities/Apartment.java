@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
@@ -14,7 +15,7 @@ import com.sun.istack.NotNull;
 
 @Entity
 @Table(name="Apartment",
-uniqueConstraints= @UniqueConstraint(columnNames= {"apartmentName","building.buildingId"})
+uniqueConstraints= @UniqueConstraint(columnNames= {"apartmentName","buildingId"})
 )
 public class Apartment {
 	
@@ -25,6 +26,7 @@ public class Apartment {
 	private int apartmentId;
 	
 	@ManyToOne
+	@JoinColumn(name = "buildingId")
 	@NotNull
 	private Building building;
 	

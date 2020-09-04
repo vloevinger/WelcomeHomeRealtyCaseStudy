@@ -69,7 +69,6 @@ public class MainController {
 			userLogin.setPassword(newLogin.getPassword());
 			userLogin.setTenant(newLogin.getTenant());
 			userLogin.setRole(newLogin.getRole());
-			System.out.println(userLogin);
 			mav.addObject("userLogin",userLogin);
 			mav.setViewName("index");
 		}
@@ -86,7 +85,6 @@ public class MainController {
 	public String logoutHandler(HttpSession session, SessionStatus status){
 		UserLogin sessionUser = (UserLogin)session.getAttribute("userLogin");
 		sessionUser.setUserName(null);
-		System.out.println(sessionUser);
 		status.setComplete();
 		session.invalidate();
 		return "login";
@@ -200,7 +198,6 @@ public class MainController {
 		boolean result = false;
 		if(role>1) {
 			if(building.getBuildingId() == 0) {
-				System.out.println(building);
 				result = buildingService.addBuildingService(building);
 				if(result) {
 					message = "Building " + building.getBuildingName() + " succesfully added";
@@ -293,7 +290,7 @@ public class MainController {
 			mav.addObject("building",building); 
 			mav.addObject("apartment",apartment);
 			mav.setViewName("apartmentProfile");
-			System.out.println(apartment);
+		
 		}
 		else {
 			mav.setViewName("login");
@@ -304,7 +301,6 @@ public class MainController {
 	@RequestMapping("/updateApartment/{urlBuildingId}")
 	public String updateApartment(@ModelAttribute Apartment apartment, @PathVariable("urlBuildingId") int buildingId,HttpSession session) {
 		String message = "";
-		System.out.println(apartment);
 		UserLogin sessionUser = (UserLogin)session.getAttribute("userLogin");
 		int role = sessionUser.getRole();
 		if(role>1) {
@@ -314,14 +310,12 @@ public class MainController {
 			boolean result =false;
 			if(apartment.getApartmentId() == 0) {
 				
-				System.out.println(apartment);
-				
 				result = apartmentService.addApartmentService(apartment);
 				if(result) {
 					message = "Apartment " + apartment.getApartmentName() + " succesfully added";
 				}
 				else {
-					message = "Apartment" + apartment.getApartmentName() + " not added";
+					message = "Apartment " + apartment.getApartmentName() + " not added";
 				}
 			}
 			else {
@@ -445,7 +439,6 @@ public class MainController {
 		int role = sessionUser.getRole();
 		if(role>0) {
 			String message ="";
-			System.out.println(tenant);
 			boolean result = false;
 			Apartment apartment = null;
 			apartment = apartmentService.getApartmentByIdService(apartmentId);

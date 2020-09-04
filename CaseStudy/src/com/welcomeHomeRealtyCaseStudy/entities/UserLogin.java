@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 import com.sun.istack.NotNull;
@@ -19,6 +20,7 @@ public class UserLogin {
 	private int userId;
 	
 	@OneToOne(cascade=CascadeType.REMOVE)
+	@JoinColumn(name = "tenantId")
 	private Tenant tenant;
 	
 	@Basic

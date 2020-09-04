@@ -22,7 +22,7 @@
 		
 				<object data="${pageContext.request.contextPath}/resources/leases/${leaseName}"
 					type="application/pdf" width="100%" height="800px">
-					<p class="text=center">
+					<p class="text-center">
 						Your lease  has not been added to the database yet. Please call the office for assistance.
 					</p>
 				</object>

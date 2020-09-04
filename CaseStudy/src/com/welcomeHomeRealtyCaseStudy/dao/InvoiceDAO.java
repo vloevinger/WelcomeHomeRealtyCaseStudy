@@ -101,7 +101,7 @@ public class InvoiceDAO extends DBConnection implements InvoiceDAOI {
 		List<Invoice> invoiceList = new ArrayList<Invoice>();
 		try {
 			this.connect();
-			Query query = em.createQuery("Select i from Invoice i order by i.tenant");
+			Query query = em.createQuery("Select i from Invoice i order by i.tenant.lastName, i.tenant.firstName");
 			invoiceList = query.getResultList();
 		}
 		catch(Exception e){
@@ -122,10 +122,10 @@ public class InvoiceDAO extends DBConnection implements InvoiceDAOI {
 			Tenant tenant = em.find(Tenant.class, tenantId);
 			Query query = null;
 			if(showOpenInvoicesOnly) {
-				 query = em.createQuery("Select i from Invoice i where i.tenant = :givenTenant AND i.paid = false order by i.invoiceId");
+				 query = em.createQuery("Select i from Invoice i where i.tenant = :givenTenant AND i.paid = false order by i.tenant.lastName, i.tenant.firstName");
 			}
 			else {
-			 query = em.createQuery("Select i from Invoice i where i.tenant = :givenTenant");	
+			 query = em.createQuery("Select i from Invoice i where i.tenant = :givendTenant");	
 			}
 			
 			query.setParameter("givenTenant", tenant);

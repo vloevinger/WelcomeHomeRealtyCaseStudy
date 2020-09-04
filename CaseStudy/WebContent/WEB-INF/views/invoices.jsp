@@ -63,7 +63,7 @@
 			</div>
 		</div>
 		<div class ="row justify-content-center mt-3">
-			<div class="col-md-10">
+			<div class="col-md-10 text-center">
 				${message}
 			</div>
 		</div>

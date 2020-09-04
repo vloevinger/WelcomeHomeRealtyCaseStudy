@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -17,7 +18,7 @@ import javax.persistence.UniqueConstraint;
 import com.sun.istack.NotNull;
 @Entity
 @Table(name = "Tenant", 
-uniqueConstraints = @UniqueConstraint(columnNames = {"email","apartment.apartmentId"})
+uniqueConstraints = @UniqueConstraint(columnNames = {"email","apartmentId"})
 )
 public class Tenant {
 	@Id
@@ -26,6 +27,7 @@ public class Tenant {
 	private int tenantId;
 
 	@ManyToOne
+	@JoinColumn(name = "apartmentId")
 	@NotNull
 	private Apartment apartment;  
 	

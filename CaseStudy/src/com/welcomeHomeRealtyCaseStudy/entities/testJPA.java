@@ -52,9 +52,8 @@ public class testJPA {
 		Apartment apartment8 = new Apartment(8,building4,"1B",5,2,1.5,2500,true);
 		Apartment apartment9 = new Apartment(9,building5,"1A",5,2,1.5,2500,true);
 		Apartment apartment10 = new Apartment(10,building5,"1B",5,2,1.5,2500,true);
-		Apartment apartment11 = new Apartment(10,building5,"1B",5,2,1.5,2500,true);
 		
-		Apartment updateapartment1 = new Apartment(1,building1,"1A",6,3,2,3000,true);
+		//Apartment updateapartment1 = new Apartment(1,building1,"1A",6,3,2,3000,true);
 		
 		apartmentService.addApartmentService(apartment1);
 		apartmentService.addApartmentService(apartment2);
@@ -66,8 +65,8 @@ public class testJPA {
 		apartmentService.addApartmentService(apartment8);
 		apartmentService.addApartmentService(apartment9);
 		apartmentService.addApartmentService(apartment10);
-		apartmentService.addApartmentService(apartment11);
-//	    	//apartmentService.deleteApartmentService(8);
+	
+		//apartmentService.deleteApartmentService(8);
 		//apartmentService.getApartmentByIdServiceint(3);
 		//apartmentService.showAllApartmentsByBuildingService(building3);
 		//apartmentService.updateApartmentService(1, updateapartment1);
